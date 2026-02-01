@@ -12,10 +12,16 @@ public class Main {
                 |___/_| |_|_|\\_\\_|\\__|
                 """);
         Scanner scanner = new Scanner(System.in);
+        ShellExecutor shellExecutor = new ShellExecutor();
 
         while (true) {
             System.out.print("shkit> ");
             String input = scanner.nextLine();
+
+            if (input.isEmpty()) continue;
+
+            shellExecutor.execute(input);
         }
+
     }
 }
