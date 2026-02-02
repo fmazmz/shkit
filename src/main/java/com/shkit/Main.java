@@ -1,4 +1,6 @@
-package com.org.shkit;
+package com.shkit;
+
+import com.shkit.util.CommandRouter;
 
 import java.util.Scanner;
 
@@ -12,7 +14,7 @@ public class Main {
                 |___/_| |_|_|\\_\\_|\\__|
                 """);
         Scanner scanner = new Scanner(System.in);
-        ShellExecutor shellExecutor = new ShellExecutor();
+        CommandRouter router = new CommandRouter();
 
         while (true) {
             System.out.print("shkit> ");
@@ -20,7 +22,7 @@ public class Main {
 
             if (input.isEmpty()) continue;
 
-            shellExecutor.execute(input);
+            router.route(input);
         }
 
     }

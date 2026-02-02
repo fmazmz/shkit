@@ -1,4 +1,4 @@
-package com.org.shkit;
+package com.shkit.util;
 
 import java.io.IOException;
 
