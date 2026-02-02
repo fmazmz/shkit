@@ -4,6 +4,7 @@ import com.shkit.commands.Command;
 import com.shkit.commands.HelpCommand;
 import com.shkit.commands.InitCommand;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ public class CommandRouter {
 
     public CommandRouter() {
         this.customCommands = new HashMap<>();
-        this.shellExecutor = new ShellExecutor();
+        this.shellExecutor = new ShellExecutor(new File(System.getProperty("user.dir")));
 
         registerCommand("help", new HelpCommand(this));
         registerCommand("init", new InitCommand());
