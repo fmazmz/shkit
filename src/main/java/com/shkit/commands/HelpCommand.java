@@ -4,10 +4,10 @@ import com.shkit.util.CommandRouter;
 
 import java.util.Map;
 
-public class Help implements Command{
+public class HelpCommand implements Command{
     private final CommandRouter router;
 
-    public Help(CommandRouter router) {
+    public HelpCommand(CommandRouter router) {
         this.router = router;
     }
 

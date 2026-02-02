@@ -1,7 +1,8 @@
 package com.shkit.util;
 
 import com.shkit.commands.Command;
-import com.shkit.commands.Help;
+import com.shkit.commands.HelpCommand;
+import com.shkit.commands.InitCommand;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +15,8 @@ public class CommandRouter {
         this.customCommands = new HashMap<>();
         this.shellExecutor = new ShellExecutor();
 
-        registerCommand("help", new Help(this));
+        registerCommand("help", new HelpCommand(this));
+        registerCommand("init", new InitCommand());
     }
 
     private void registerCommand(String name, Command command) {
